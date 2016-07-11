@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Mediaff.com | Online Media on the go{% endblock %}</title>
+        {% block stylesheets %}
+        <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/animate.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/prettyPhoto.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/responsive.css') }}" rel="stylesheet">
+        <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+        <![endif]-->       
+        <link rel="shortcut icon" href="images/ico/favicon.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body class="homepage">
+        <header id="header">
+            <div class="top-bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-4">
+                            <div class="top-number"><p><i class="fa fa-phone-square"></i>  +420 775 412 797</p></div>
+                        </div>
+                        <div class="col-sm-6 col-xs-8">
+                           <div class="social">
+                                <ul class="social-share">
+                                    <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                                </ul>
+                                <div class="search">
+                                    <form role="form">
+                                        <input type="text" class="search-form" autocomplete="off" placeholder="Search">
+                                        <i class="fa fa-search"></i>
+                                    </form>
+                               </div>
+                           </div>
+                        </div>
+                    </div>
+                </div><!--/.container-->
+            </div><!--/.top-bar-->
+
+            <nav class="navbar navbar-inverse" role="banner">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html"><img src="../images/logo.png" alt="logo"></a>
+                    </div>
+
+                    <div class="collapse navbar-collapse navbar-right">
+                        <ul class="nav navbar-nav">
+                            <li><a href="{{ path('index') }}">Home</a></li>
+                            <li><a href="{{ path('about') }}">About Us</a></li>
+                            <li><a href="{{ path('services') }}">Services</a></li>
+                            <li><a href="{{ path('portfolio') }}">Portfolio</a></li>
+                            <li><a href="{{ path('contact') }}">Contact</a></li>                        
+                        </ul>
+                    </div>
+                </div><!--/.container-->
+            </nav><!--/nav-->
+    </header><!--/header-->
+        
+    {% block body %}{% endblock %}
+    
+    <section id="conatcat-info">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="media contact-info wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                        <div class="pull-left">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <div class="media-body">
+                            <h2>Have a question or need assistance?</h2>
+                            <p>Not sure about some of the services we provide or how to get started, feel free to drop us a line right <a href="contact-us.html">here</a> or give us a call</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/.container-->    
+    </section><!--/#conatcat-info-->
+
+    <section id="bottom">
+        <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Portfolio</a></li>
+                            <li><a href="#">Terms of use</a></li>
+                            <li><a href="#">Privacy policy</a></li>
+                            <li><a href="#">Contact us</a></li>
+                        </ul>
+                    </div>    
+                </div><!--/.col-md-3-->
+				
+				<div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Company Address</h3>
+                        <ul>
+                            <li><strong>UK Office</strong></li>
+                            <li>123 Kinsington Road</li>
+                            <li>West London</li>
+                            <li>132465</li>
+                            <li>London, United Kingdom</li>
+                        </ul>
+                    </div>    
+                </div><!--/.col-md-3-->
+		<div class="col-sm-6" style="float:right">
+                    <div class="contact-form">
+                        <h3 style="text-align:center; padding-bottom:2px">Quick request form</h3>
+                        {{ form_start(form2, {'attr': {'novalidate': 'novalidate'}}) }}
+                            <div class="form-group">
+                                {{ form_label(form2.name) }}
+                                {{ form_widget(form2.name) }}
+                            </div>
+                            <div class="form-group">
+                                {{ form_label(form2.emailaddress) }}
+                                {{ form_widget(form2.emailaddress) }}
+                            </div>
+                            <div class="form-group">
+                                {{ form_label(form2.subject) }}
+                                {{ form_widget(form2.subject) }}
+                            </div>
+                            <div class="form-group">
+                                {{ form_label(form2.message) }}
+                                {{ form_widget(form2.message) }}
+                            </div>
+                            <div class="form-group" style="text-align:center;">
+                                {{ form_row(form2.submit, { 'label': 'SEND US A MESSAGE' }) }}
+                            </div>
+                        {{ form_end(form2) }}   
+                    </div>
+                </div>      
+            </div>	
+        </div>
+    </section><!--/#bottom-->
+    
+    <footer id="footer" class="midnight-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12" style="text-align:center">
+                    &copy; 2016 <a target="_blank" href="http://mediaff.com" title="Online marketing solutions of your needs">Mediaff.com</a>. All Rights Reserved.
+                </div>
+            </div>
+        </div>
+    </footer><!--/#footer-->
+        
+    {% block javascripts %}
+    <script src="{{ asset('js/jquery.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.prettyPhoto.js') }}"></script>
+    <script src="{{ asset('js/jquery.isotope.min.js') }}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
+    <script src="{{ asset('js/wow.min.js') }}"></script>
+    {% endblock %}
+    </body>
+</html>
