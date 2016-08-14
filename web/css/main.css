@@ -2525,7 +2525,16 @@ shortcodes page css
   margin-left: 15px;
 }
 
+.bcimageone {
+    background-image: url(../images/slider/bg1.jpg);
+}
+.bcimagetwo {
+    background-image: url(../images/slider/bg2.jpg);
+}
 
+.bcimagethree {
+    background-image: url(../images/slider/bg3.jpg);
+}
 
 
 
