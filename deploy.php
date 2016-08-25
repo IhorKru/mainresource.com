@@ -13,7 +13,7 @@ set('shared_dirs', ['app/logs']);
 set('writable_dirs', ['app/cache', 'app/logs']);
 
 // Configure servers
-server('production', 'travelflex.eu.pn')
+server('production', 'travelflex.eu.pn', 21)
     ->user('kruchynenko@gmail.com')
     ->password('80506043850Qq')
     ->env('deploy_path', '/var/www/travelflex.eu.pn');
