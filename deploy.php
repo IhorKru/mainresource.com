@@ -7,21 +7,16 @@
 require 'recipe/symfony.php';
 
 // Set configurations
-set('repository', 'git@domain.com:username/repository.git');
+set('repository', 'git@github.com:IhorKru/mediaff.com.git');
 set('shared_files', ['app/config/parameters.yml']);
 set('shared_dirs', ['app/logs']);
 set('writable_dirs', ['app/cache', 'app/logs']);
 
 // Configure servers
-server('production', 'prod.domain.com')
-    ->user('username')
-    ->password()
-    ->env('deploy_path', '/var/www/prod.domain.com');
-
-server('beta', 'beta.domain.com')
-    ->user('username')
-    ->password()
-    ->env('deploy_path', '/var/www/beta.domain.com');
+server('production', 'travelflex.eu.pn')
+    ->user('kruchynenko@gmail.com')
+    ->password('80506043850Qq')
+    ->env('deploy_path', '/var/www/travelflex.eu.pn');
 
 /**
  * Restart php-fpm on success deploy.
