@@ -1,0 +1,14 @@
+{% extends "backendbase.html.twig" %}
+
+{% block logout %}
+	<li class="active"><a href="{{ path('campaigns') }}">Campaign Manager</a></li>
+	<li class="active"><a href="{{ path('logout') }}">Log Out</a></li>
+{% endblock %}
+
+{% block body %}
+	<body>
+		<div class="container">
+		  	<h2>{{ partnername }} campaign with {{ numsubscribers }} emails was create successfully</h2>
+		</div>
+	</body>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "backendbase.html.twig" %}
+
+{% block logout %}
+    <li class="active"><a href="{{ path('campaigns') }}">Campaign Manager</a></li>
+    <li class="active"><a href="{{ path('logout') }}">Log Out</a></li>
+{% endblock %}
+
+{% block body %}
+	<body>
+		<div class="container">
+			<div class="col-sm-4 col-sm-4 text-center col-sm-offset-4">
+			  	<h3>Campaign Details</h3>
+			  	{{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+				  	<div class="form-group">
+						{{ form_label(form.partnername) }}
+			            {{ form_widget(form.partnername) }}
+			        </div>
+			        <div class="form-group">
+						{{ form_label(form.resourcename) }}
+			            {{ form_widget(form.resourcename) }}
+			        </div>
+			        <div class="form-group">
+						{{ form_label(form.templatename) }}
+			            {{ form_widget(form.templatename) }}
+			        </div>
+			        <div class="form-group">
+						{{ form_label(form.numemails) }}
+			            {{ form_widget(form.numemails) }}
+					</div>
+			  	{{ form_end(form) }}
+			</div>
+		</div>
+	</body>
+{% endblock %}

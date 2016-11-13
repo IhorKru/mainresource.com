@@ -16,7 +16,7 @@ set('writable_dirs', ['app/cache', 'app/logs']);
 server('production', 'travelflex.eu.pn', 21)
     ->user('kruchynenko@gmail.com')
     ->password('80506043850Qq')
-    ->env('deploy_path', '/var/www/travelflex.eu.pn');
+    ->env('deploy_path', '/var/www/mediaff');
 
 /**
  * Restart php-fpm on success deploy.
