@@ -7,16 +7,16 @@
 require 'recipe/symfony.php';
 
 // Set configurations
-set('repository', 'git@github.com:IhorKru/mediaff.com.git');
+set('repository', 'https://github.com/IhorKru/mediaff.com.git');
 set('shared_files', ['app/config/parameters.yml']);
 set('shared_dirs', ['app/logs']);
 set('writable_dirs', ['app/cache', 'app/logs']);
 
 // Configure servers
-server('production', 'travelflex.eu.pn', 21)
-    ->user('kruchynenko@gmail.com')
-    ->password('80506043850Qq')
-    ->env('deploy_path', '/var/www/mediaff');
+server('production', 'mediaff.com', '22')
+    ->user('mediazmj')
+    ->password('3+f9mJ5#1n0q')
+    ->env('deploy_path', '/home/mediazmj/public_html/adk.com');
 
 /**
  * Restart php-fpm on success deploy.
