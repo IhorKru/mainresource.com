@@ -16,7 +16,7 @@ set('writable_dirs', ['app/cache', 'app/logs']);
 server('production', 'mediaff.com', '22')
     ->user('mediazmj')
     ->password('3+f9mJ5#1n0q')
-    ->env('deploy_path', '/home/mediazmj/public_html/adk.com');
+    ->env('deploy_path', '/home/mediazmj/public_html/adk');
 
 /**
  * Restart php-fpm on success deploy.
