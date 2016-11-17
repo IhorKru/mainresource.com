@@ -122,7 +122,7 @@ class SendyApps
     /**
      * @var int
      *
-     * @ORM\Column(name="camplaint_setup", type="integer")
+     * @ORM\Column(name="complaint_setup", type="integer")
      */
     private $camplaintSetup;
 
@@ -537,27 +537,27 @@ class SendyApps
     }
 
     /**
-     * Set camplaintSetup
+     * Set complaintSetup
      *
-     * @param integer $camplaintSetup
+     * @param integer $complaintSetup
      *
      * @return SendyApps
      */
-    public function setCamplaintSetup($camplaintSetup)
+    public function setCamplaintSetup($complaintSetup)
     {
-        $this->camplaintSetup = $camplaintSetup;
+        $this->camplaintSetup = $complaintSetup;
 
         return $this;
     }
 
     /**
-     * Get camplaintSetup
+     * Get complaintSetup
      *
      * @return int
      */
-    public function getCamplaintSetup()
+    public function getComplaintSetup()
     {
-        return $this->camplaintSetup;
+        return $this->complaintSetup;
     }
 
     /**
