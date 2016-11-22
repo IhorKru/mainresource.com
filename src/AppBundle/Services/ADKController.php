@@ -23,7 +23,7 @@ use AppBundle\Entity\Template;
 class ADKController extends FOSRestController 
 {
 
-	private $numcampaigns;
+    private $numcampaigns;
     private $numsubscribers;
 
     public function adkAction($numcampaigns)
