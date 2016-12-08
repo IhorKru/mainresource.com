@@ -380,7 +380,10 @@ class ADKController extends FOSRestController
                 $sendyoffer ->setReplyTo($appreplytoemail);
                 $sendyoffer ->setTitle("[Name,fallback=], ".$sendytitle);
                 $sendyoffer ->setHtmlText($emailbody);
+                $sendyoffer ->setToSendLists($queryli->getSingleScalarResult() + 1);
                 $sendyoffer ->setLists($queryli->getSingleScalarResult() + 1);
+                $sendyoffer ->setSendDate(time());
+                $sendyoffer ->setTimezone('America/New_York');
                 $em->persist($sendyoffer);
                 $em->flush();
             }
