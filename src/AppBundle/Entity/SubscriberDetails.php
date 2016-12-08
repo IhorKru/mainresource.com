@@ -2,10 +2,9 @@
 
 namespace AppBundle\Entity;
 
-use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
-use AppBundle\Entity\SubscriberOptInDetails;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * SubscriberDetails

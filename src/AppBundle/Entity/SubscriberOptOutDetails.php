@@ -3,7 +3,6 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use AppBundle\Entity\SubscriberDetails;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
