@@ -2,23 +2,22 @@
 
 namespace AppBundle\Services;
 
+use AppBundle\Entity\Campaigns;
+use AppBundle\Entity\Lists;
+use AppBundle\Entity\Subscriber;
+use AppBundle\Entity\SubscriberAddress;
+use AppBundle\Entity\SubscriberADKCampaign;
+use AppBundle\Entity\SubscriberADKCampErrors;
+use AppBundle\Entity\SubscriberDetails;
 use AppBundle\Entity\SubscriberOptInDetails;
 use AppBundle\Entity\Subscribers;
+use DateTime;
 use FOS\RestBundle\Controller\Annotations as Rest;
 use FOS\RestBundle\Controller\FOSRestController;
 use SimpleXMLElement;
 use Symfony\Component\DomCrawler\Crawler;
-use AppBundle\Entity\SubscriberDetails;
-use AppBundle\Entity\SubscriberAddress;
-use AppBundle\Entity\SubscriberADKCampaign;
-use AppBundle\Entity\SubscriberADKCampErrors;
-use DateTime;
+
 #sendy entities
-use AppBundle\Entity\Subscriber;
-use AppBundle\Entity\Campaigns;
-use AppBundle\Entity\Lists;
-use AppBundle\Entity\SendyApps;
-use AppBundle\Entity\Template;
 
 class ADKController extends FOSRestController 
 {

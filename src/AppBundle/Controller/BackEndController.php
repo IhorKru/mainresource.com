@@ -2,13 +2,11 @@
 
 namespace AppBundle\Controller;
 
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use AppBundle\Entity\CampaignInputDetails;
+use AppBundle\Form\InputType;
+use AppBundle\Services\AdKnowledgeQuery;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-use AppBundle\Form\InputType;
-use AppBundle\Entity\CampaignInputDetails;
-use AppBundle\Services\ADKController;
-use AppBundle\Services\AdKnowledgeQuery;
 
 class BackEndController extends Controller
 {
