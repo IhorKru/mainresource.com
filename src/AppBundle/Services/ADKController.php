@@ -332,7 +332,14 @@ class ADKController extends FOSRestController
                     $newList ->setUserid('1');
                     $newList ->setApp($app);
                     $newList ->setName($sendyfrom);
-
+                    $newList ->setOptIn('1');
+                    $newList ->setConfirmUrl('http://mediaff.com');
+                    $newList ->setThankyou('0');
+                    $newList ->setGoodbye('0');
+                    $newList ->setUnsubscribeAllList('1');
+                    $newList ->setPrevCount('0');
+                    $newList ->setCurrentlyProcessing('0');
+                    $newList ->setTotalRecords('0');
                     $em->persist($newList);
                     $em->flush();
 
