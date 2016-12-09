@@ -373,7 +373,7 @@ class ADKController extends FOSRestController
                         $sendySubscriber ->setBounced('0');
                         $sendySubscriber ->setBounceSoft('0');
                         $sendySubscriber ->setComplaint('0');
-                        $sendySubscriber ->setTimestamp(new DateTime());
+                        $sendySubscriber ->setTimestamp(time());
                         $sendySubscriber ->setJoinDate($subscriptiondate);
                         $sendySubscriber ->setConfirmed('1');
                         $sendySubscriber ->setMessageID('testmessage');
