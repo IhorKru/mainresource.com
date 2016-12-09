@@ -182,7 +182,19 @@ class Campaigns
      */
     private $complaintSetup = '0';
 
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="opens_tracking", type="integer", nullable=true)
+     */
+    private $openstacking = '1';
 
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="links_tracking", type="integer", nullable=true)
+     */
+    private $linkstracking = '1';
 
     /**
      * Get id
@@ -758,5 +770,53 @@ class Campaigns
         $this->id = $id;
 
         return $this;
+    }
+
+    /**
+     * Set openstacking
+     *
+     * @param integer $openstacking
+     *
+     * @return Campaigns
+     */
+    public function setOpenstacking($openstacking)
+    {
+        $this->openstacking = $openstacking;
+
+        return $this;
+    }
+
+    /**
+     * Get openstacking
+     *
+     * @return integer
+     */
+    public function getOpenstacking()
+    {
+        return $this->openstacking;
+    }
+
+    /**
+     * Set linkstracking
+     *
+     * @param integer $linkstracking
+     *
+     * @return Campaigns
+     */
+    public function setLinkstracking($linkstracking)
+    {
+        $this->linkstracking = $linkstracking;
+
+        return $this;
+    }
+
+    /**
+     * Get linkstracking
+     *
+     * @return integer
+     */
+    public function getLinkstracking()
+    {
+        return $this->linkstracking;
     }
 }

@@ -362,9 +362,13 @@ class ADKController extends FOSRestController
                         $sendySubscriber ->setName($firstname);
                         $sendySubscriber ->setCustomFields($lastname.'%s%');
                         $sendySubscriber ->setList($queryli->getSingleScalarResult() + 1);
+                        $sendySubscriber ->setUnsubscribed('0');
+                        $sendySubscriber ->setBounced('0');
+                        $sendySubscriber ->setBounceSoft('0');
+                        $sendySubscriber ->setComplaint('0');
                         $sendySubscriber ->setTimestamp(new DateTime());
                         $sendySubscriber ->setJoinDate($subscriptiondate);
-                        $sendySubscriber ->setConfirmed('Y');
+                        $sendySubscriber ->setConfirmed('1');
                         $sendySubscriber ->setMessageID('testmessage');
                         $em->persist($sendySubscriber);
                         $em->flush();
@@ -380,7 +384,9 @@ class ADKController extends FOSRestController
                 $sendyoffer ->setTitle("[Name,fallback=], ".$sendytitle);
                 $sendyoffer ->setHtmlText($emailbody);
                 $sendyoffer ->setToSendLists($queryli->getSingleScalarResult() + 1);
+                $sendyoffer ->setWysiwyg('1');
                 $sendyoffer ->setLists($queryli->getSingleScalarResult() + 1);
+                $sendyoffer ->setSendDate(time() + 60);
                 $sendyoffer ->setTimezone('America/New_York');
                 $em->persist($sendyoffer);
                 $em->flush();
