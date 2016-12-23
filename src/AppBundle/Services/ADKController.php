@@ -143,7 +143,7 @@ class ADKController extends FOSRestController
                              . "<metrocode>$metrocode</metrocode>"
                              . "<postalcode>$postalcode</postalcode>"
                              . "<gender>$gender</gender>"
-                             . "<test>1</test>"
+                             . "<test>0</test>"
                           . "</email>";
                 }
                 #preparing xml string
