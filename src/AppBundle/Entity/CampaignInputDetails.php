@@ -48,8 +48,28 @@ class CampaignInputDetails
      * @ORM\Column(name="numemails", type="integer")
      */
     private $numemails;
-
-
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="timezone", type="string", length=255)
+     */
+    private $timezone;
+    
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="datetosend", type="datetime", length=255)
+     */
+    private $datetosend;
+    
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="delay", type="smallint")
+     */
+    private $delay;
+    
     /**
      * Get id
      *
@@ -168,5 +188,77 @@ class CampaignInputDetails
     public function getTemplatename()
     {
         return $this->templatename;
+    }
+
+    /**
+     * Set timezone
+     *
+     * @param string $timezone
+     *
+     * @return CampaignInputDetails
+     */
+    public function setTimezone($timezone)
+    {
+        $this->timezone = $timezone;
+
+        return $this;
+    }
+
+    /**
+     * Get timezone
+     *
+     * @return string
+     */
+    public function getTimezone()
+    {
+        return $this->timezone;
+    }
+
+    /**
+     * Set datetosend
+     *
+     * @param \DateTime $datetosend
+     *
+     * @return CampaignInputDetails
+     */
+    public function setDatetosend($datetosend)
+    {
+        $this->datetosend = $datetosend;
+
+        return $this;
+    }
+
+    /**
+     * Get datetosend
+     *
+     * @return \DateTime
+     */
+    public function getDatetosend()
+    {
+        return $this->datetosend;
+    }
+
+    /**
+     * Set delay
+     *
+     * @param integer $delay
+     *
+     * @return CampaignInputDetails
+     */
+    public function setDelay($delay)
+    {
+        $this->delay = $delay;
+
+        return $this;
+    }
+
+    /**
+     * Get delay
+     *
+     * @return integer
+     */
+    public function getDelay()
+    {
+        return $this->delay;
     }
 }

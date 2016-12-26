@@ -69,5 +69,5 @@ jQuery(function($) {'use strict',
 	});
 
 	//hide fields
-
+        
 });

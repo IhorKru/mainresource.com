@@ -6,6 +6,9 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
+use Symfony\Component\Form\Extension\Core\Type\TimeType;
+use Symfony\Component\Form\Extension\Core\Type\TimezoneType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -47,6 +50,7 @@ class InputType extends AbstractType {
                     'Relaxst.com' => 8,
                     'Mediaff.com' => 9
                 ],
+                'preferred_choices' => ['Relaxst.com', '8'],
                 'attr' => [
                     'class' => 'form-control'
                 ]])
@@ -64,6 +68,34 @@ class InputType extends AbstractType {
                 'error_bubbling' => true,
                 'attr' => [
                     'placeholder' => 'Number of Campaigns',
+                    'class' => 'form-control',
+                    'id'=> "ex3"
+                    ]])
+            ->add('timezone', TimezoneType::class, [
+                'label' => false,
+                'required' => true,
+                'error_bubbling' => true,
+                'placeholder' => 'Select Timezone',
+                'attr' => [
+                    'class' => 'form-control',
+                    'id'=> "ex3"
+                    ]
+                ])
+            ->add('datetosend', DateTimeType::class, [
+                'label' => false,
+                'required' => true,
+                'error_bubbling' => true,
+                'date_widget' => 'single_text',
+                'attr' => [
+                    'class' => 'form-control',
+                    'id' => "ex3"
+                    ]])
+            ->add('delay', TimeType::class, [
+                'label' => false,
+                'required' => true,
+                'error_bubbling' => true,
+                'attr' => [
+                    'placeholder' => 'Select Delay',
                     'class' => 'form-control',
                     'id'=> "ex3"
                     ]])

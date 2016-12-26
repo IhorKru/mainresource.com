@@ -13,22 +13,40 @@
                 <div class="col-sm-4 col-sm-4 text-center col-sm-offset-4">
                     <h3>Campaign Details</h3>
                     {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
-                            <div class="form-group">
-                                    {{ form_label(form.partnername) }}
+                    <div class="form-group">
+                        {{ form_label(form.partnername) }}
                         {{ form_widget(form.partnername) }}
                     </div>
                     <div class="form-group">
-                                    {{ form_label(form.resourcename) }}
+                        {{ form_label(form.resourcename) }}
                         {{ form_widget(form.resourcename) }}
                     </div>
                     <div class="form-group">
-                                    {{ form_label(form.templatename) }}
+                        {{ form_label(form.templatename) }}
                         {{ form_widget(form.templatename) }}
                     </div>
                     <div class="form-group">
-                                    {{ form_label(form.numemails) }}
+                        {{ form_label(form.numemails) }}
                         {{ form_widget(form.numemails) }}
-                            </div>
+                    </div>
+                    <div class="form-group">
+                        {{ form_label(form.timezone) }}
+                        {{ form_widget(form.timezone) }}
+                    </div>
+                    <div class="form-group">
+                        <div class='input-group date form_datetime' id='datetimepicker2'>
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                            {{ form_label(form.datetosend) }}
+                            {{ form_widget(form.datetosend) }}
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        {{ form_label(form.delay) }}
+                        {{ form_widget(form.delay) }}
+                    </div>
                     {{ form_end(form) }}
                 </div>
             </div>
