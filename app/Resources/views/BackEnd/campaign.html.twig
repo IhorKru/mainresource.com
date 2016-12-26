@@ -1,10 +1,10 @@
 {% extends "backendbase.html.twig" %}
 
 {% block logout %} 
-    <li ><a href="http://sendy.mediaff.com">Sendy</a></li>
+    <li><a href="http://sendy.mediaff.com"><span class="glyphicon glyphicon-envelope right-pad"></span>Sendy</a></li>
 {% endblock %}
 {% block navright %}
-    <li><a href="{{ path('logout') }}"><span class="glyphicon glyphicon-user"></span>Log Out</a></li>
+    <li><a href="{{ path('logout') }}"><span class="glyphicon glyphicon-user right-pad"></span>Log Out</a></li>
 {% endblock %}
 
 {% block body %}

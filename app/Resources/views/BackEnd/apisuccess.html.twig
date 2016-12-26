@@ -1,17 +1,17 @@
 {% extends "backendbase.html.twig" %}
 
 {% block logout %}
-	<li class="active"><a href="{{ path('campaigns') }}">Campaign Manager</a></li>
-        <li ><a href="http://sendy.mediaff.com">Sendy</a></li>
+	<li class="active"><a href="{{ path('campaigns') }}"><span class="glyphicon glyphicon-screenshot right-pad"></span>Camp Manager</a></li>
+        <li><a href="http://sendy.mediaff.com"><span class="glyphicon glyphicon-envelope right-pad"></span>Sendy</a></li>
 {% endblock %}
 {% block navright %}
-    <li><a href="{{ path('logout') }}"><span class="glyphicon glyphicon-user"></span>Log Out</a></li>
+    <li><a href="{{ path('logout') }}"><span class="glyphicon glyphicon-user right-pad"></span>Log Out</a></li>
 {% endblock %}
 
 {% block body %}
 	<body>
-		<div class="container">
-		  	<h2>{{ partnername }} campaign with {{ numsubscribers }} emails was create successfully</h2>
-		</div>
+            <div class="container">
+		<h2>{{ partnername }} campaign with {{ numsubscribers }} emails was create successfully</h2>
+            </div>
 	</body>
 {% endblock %}
