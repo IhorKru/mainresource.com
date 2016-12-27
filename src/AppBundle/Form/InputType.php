@@ -6,8 +6,6 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
-use Symfony\Component\Form\Extension\Core\Type\TimeType;
 use Symfony\Component\Form\Extension\Core\Type\TimezoneType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -79,7 +77,8 @@ class InputType extends AbstractType {
                 'attr' => [
                     'class' => 'form-control',
                     'id'=> "ex3"
-                    ]
+                    ],
+                'preferred_choices' => ['New York', 'arr']
                 ])
             ->add('datetosend', TextType::class, [
                 'label' => false,
@@ -87,17 +86,8 @@ class InputType extends AbstractType {
                 'error_bubbling' => true,
                 'attr' => [
                     'class' => 'form-control',
-                    'placeholder' => 'Select Deployment Date',
+                    'placeholder' => 'Deployment Date',
                     'id' => "ex3"
-                    ]])
-            ->add('delay', TextType::class, [
-                'label' => false,
-                'required' => true,
-                'error_bubbling' => true,
-                'attr' => [
-                    'placeholder' => 'Select Delay',
-                    'class' => 'form-control',
-                    'id'=> "ex3"
                     ]])
             ->add('submit', SubmitType::class, [
                 'label' => 'Generate Campaigns',

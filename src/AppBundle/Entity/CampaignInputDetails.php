@@ -64,13 +64,6 @@ class CampaignInputDetails
     private $datetosend;
     
     /**
-     * @var int
-     *
-     * @ORM\Column(name="delay", type="smallint")
-     */
-    private $delay;
-    
-    /**
      * Get id
      *
      * @return int
@@ -238,27 +231,4 @@ class CampaignInputDetails
         return $this->datetosend;
     }
 
-    /**
-     * Set delay
-     *
-     * @param integer $delay
-     *
-     * @return CampaignInputDetails
-     */
-    public function setDelay($delay)
-    {
-        $this->delay = $delay;
-
-        return $this;
-    }
-
-    /**
-     * Get delay
-     *
-     * @return integer
-     */
-    public function getDelay()
-    {
-        return $this->delay;
-    }
 }
