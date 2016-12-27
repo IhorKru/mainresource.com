@@ -19,7 +19,7 @@ $(document).ready(function(){
             $("#datetimepicker2").show();
         }
     }).trigger("change")
-       
+    
     $('.form_datetime').datetimepicker({
         //language:  'uk',
         weekStart: 1,
@@ -53,4 +53,5 @@ $(document).ready(function(){
 		maxView: 1,
 		forceParse: 0
     });
+    
 });
