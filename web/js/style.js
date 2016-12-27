@@ -3,19 +3,19 @@ $(document).ready(function(){
         if ( this.value == '0'){
             $("#input_resourcename").hide();
             $("#input_templatename").hide();
-            $("#input_numemails").hide();
-            $("#input_timezone").hide();
+            $("#numemailspicker").hide();
+            $("#timezonepicker").hide();
             $("#datetimepicker2").hide();
         } else if (this.value == '1'){
             $("#input_resourcename").hide();
             $("#input_templatename").hide();
-            $("#input_numemails").show();
-            $("#input_timezone").show();
+            $("#numemailspicker").show();
+            $("#timezonepicker").show();
             $("#datetimepicker2").show();
         } else {
             $("#input_resourcename").show();
             $("#input_templatename").show();
-            $("#input_timezone").show();
+            $("#timezonepicker").show();
             $("#datetimepicker2").show();
         }
     }).trigger("change")

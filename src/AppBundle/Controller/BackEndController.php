@@ -31,11 +31,13 @@ class BackEndController extends Controller
             //$resourceid = $form['resourcename']->getData();
             $templateid = $form['templatename']->getData();
             $numcampaigns = $form['numemails']->getData();
+            $timezone = $form['timezone'] ->getData();
+            $depdate = $form['datetosend'] ->getData();
 
             if($partner == 1 and is_null($templateid)) {
                $partnername = "AdKnowledge";
                $getcampaign = $this->get('api.adk');
-               $subscriberst = $getcampaign -> ADKAction($numcampaigns);
+               $subscriberst = $getcampaign -> ADKAction($numcampaigns, $timezone, $depdate);
             }
 
             //generating successfull responce page

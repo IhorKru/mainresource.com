@@ -23,9 +23,10 @@ class ADKController extends FOSRestController
 {
 
     private $numcampaigns;
-    private $numsubscribers;
+    private $timezone;
+    private $depdate;
 
-    public function adkAction($numcampaigns)
+    public function adkAction($numcampaigns, $timezone, $depdate)
     {
     	# 1a. Configuration setup for connecting to ADK
         $list_id = '23413';
@@ -355,7 +356,6 @@ class ADKController extends FOSRestController
 
                     foreach ($adkentities as $adksubscriber) {
                         $adksubscremail = $adksubscriber ->getRecipient();
-
                         $subscriber = $ent->findOneByEmailaddress($adksubscremail);
                             $firstname = $subscriber ->getFirstName();
                             $lastname = $subscriber ->getLastName();
@@ -373,7 +373,7 @@ class ADKController extends FOSRestController
                         $sendySubscriber ->setBounced('0');
                         $sendySubscriber ->setBounceSoft('0');
                         $sendySubscriber ->setComplaint('0');
-                        $sendySubscriber ->setTimestamp(time());
+                        $sendySubscriber ->setTimestamp(new DateTime());
                         $sendySubscriber ->setJoinDate($subscriptiondate);
                         $sendySubscriber ->setConfirmed('1');
                         $sendySubscriber ->setMessageID('testmessage');
@@ -393,8 +393,10 @@ class ADKController extends FOSRestController
                 $sendyoffer ->setToSendLists($queryli->getSingleScalarResult() + 1);
                 $sendyoffer ->setWysiwyg('1');
                 $sendyoffer ->setLists($queryli->getSingleScalarResult() + 1);
-                $sendyoffer ->setSendDate(time() + 60);
-                $sendyoffer ->setTimezone('America/New_York');
+                $sendyoffer ->setSendDate($depdate);
+                $sendyoffer ->setTimezone($timezone);
+                //$sendyoffer ->setSendDate(time() + 60);
+                //$sendyoffer ->setTimezone('America/New_York');
                 $em->persist($sendyoffer);
                 $em->flush();
             }
