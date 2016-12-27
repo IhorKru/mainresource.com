@@ -156,7 +156,7 @@ class ADKController extends FOSRestController
                 $query .= 'idomain=' . $idomain . '&';
                 $query .= 'cdomain=' . $cdomain . '&';
                 $query .= 'request=' . $request .'&';
-                $query .= 'test=1';
+                $query .= 'test=0';
 
                 array_push($xmlarray, $query);
             }
