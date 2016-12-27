@@ -90,11 +90,10 @@ class InputType extends AbstractType {
                     'placeholder' => 'Select Deployment Date',
                     'id' => "ex3"
                     ]])
-            ->add('delay', TimeType::class, [
+            ->add('delay', TextType::class, [
                 'label' => false,
                 'required' => true,
                 'error_bubbling' => true,
-                'widget' => 'single_text',
                 'attr' => [
                     'placeholder' => 'Select Delay',
                     'class' => 'form-control',
