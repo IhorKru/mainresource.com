@@ -44,9 +44,15 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        {{ form_label(form.delay) }}
-                        {{ form_widget(form.delay) }}
-                    </div>
+                        <div class='input-group date form_datetime' id='datetimepicker2'>
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-time"></span>
+                            </span>
+                            {{ form_label(form.delay) }}
+                            {{ form_widget(form.delay) }}
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                        </div>
+                    </div>        
                     {{ form_end(form) }}
                 </div>
             </div>

@@ -81,19 +81,20 @@ class InputType extends AbstractType {
                     'id'=> "ex3"
                     ]
                 ])
-            ->add('datetosend', DateTimeType::class, [
+            ->add('datetosend', TextType::class, [
                 'label' => false,
                 'required' => true,
                 'error_bubbling' => true,
-                'date_widget' => 'single_text',
                 'attr' => [
                     'class' => 'form-control',
+                    'placeholder' => 'Select Deployment Date',
                     'id' => "ex3"
                     ]])
             ->add('delay', TimeType::class, [
                 'label' => false,
                 'required' => true,
                 'error_bubbling' => true,
+                'widget' => 'single_text',
                 'attr' => [
                     'placeholder' => 'Select Delay',
                     'class' => 'form-control',
@@ -101,9 +102,9 @@ class InputType extends AbstractType {
                     ]])
             ->add('submit', SubmitType::class, [
                 'label' => 'Generate Campaigns',
-                'attr' => array(
+                'attr' => [
                     'class' => 'btn btn-success btn-block'
-                )])
+                ]])
              ;
     }
     
